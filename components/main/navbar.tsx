@@ -3,10 +3,15 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { LINKS, NAV_LINKS, SOCIALS } from "@/constants";
+import {  NAV_LINKS, SOCIALS } from "@/constants";
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Helper function to close mobile menu on link click
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001427] backdrop-blur-md z-50 px-10">
@@ -25,7 +30,7 @@ export const Navbar = () => {
             draggable={false}
             className="cursor-pointer"
           />
-          <div className="hidden md:flex md:selffont-bold ml-[10px] text-gray-300">John Doe</div>
+          <div className="hidden md:flex md:selffont-bold ml-[10px] text-gray-300">Shravan Deb</div>
         </Link>
 
         {/* Web Navbar */}
@@ -35,21 +40,16 @@ export const Navbar = () => {
               <Link
                 key={link.title}
                 href={link.link}
+                // Check if the link is external (like the old Source Code, if you had one) 
+                // or if it's the new Certificates link. Since we added Certificates to NAV_LINKS 
+                // as an internal link, we only need to check for target="_blank" if we want to 
+                // link to an external source, but since all NAV_LINKS are internal, 
+                // we keep it simple.
                 className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
               >
                 {link.title}
               </Link>
             ))}
-
-            {/* Source Code */}
-            <Link
-              href={LINKS.sourceCode}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
-            >
-              Source Code
-            </Link>
           </div>
         </div>
 
@@ -86,20 +86,12 @@ export const Navbar = () => {
                 key={link.title}
                 href={link.link}
                 className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={handleLinkClick}
               >
                 {link.title}
               </Link>
             ))}
-            <Link
-              href={LINKS.sourceCode}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Source Code
-            </Link>
+            {/* The old hardcoded Certificates link is now removed, as it's part of NAV_LINKS */}
           </div>
 
           {/* Social Icons */}
