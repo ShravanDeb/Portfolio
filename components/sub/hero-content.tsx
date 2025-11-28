@@ -41,11 +41,11 @@ export const HeroContent = () => {
         </motion.div>
 
         <motion.p
-          variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-400 my-5 max-w-[600px]"
-        >
-          I'm an aspiring AI/ML developer focused on Python, MySQL, and modern web technologies to build comprehensive, data-driven solutions.
-        </motion.p>
+    variants={slideInFromLeft(0.8)}
+    className="text-lg text-gray-400 my-5 max-w-[600px]"
+>
+    I&apos;m an aspiring AI/ML developer focused on Python, MySQL, and modern web technologies to build comprehensive, data-driven solutions.
+</motion.p>
         
         {/* The "Learn more" button has been removed from here */}
         
