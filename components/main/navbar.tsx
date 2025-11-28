@@ -23,7 +23,7 @@ export const Navbar = () => {
           className="flex items-center"
         >
           <Image
-            src="/logo.png"
+            src="/Logo.png"
             alt="Logo"
             width={70}
             height={70}
@@ -40,11 +40,6 @@ export const Navbar = () => {
               <Link
                 key={link.title}
                 href={link.link}
-                // Check if the link is external (like the old Source Code, if you had one) 
-                // or if it's the new Certificates link. Since we added Certificates to NAV_LINKS 
-                // as an internal link, we only need to check for target="_blank" if we want to 
-                // link to an external source, but since all NAV_LINKS are internal, 
-                // we keep it simple.
                 className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
               >
                 {link.title}
