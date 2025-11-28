@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import {  NAV_LINKS, SOCIALS } from "@/constants";
+import { NAV_LINKS, SOCIALS } from "@/constants";
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,7 +23,8 @@ export const Navbar = () => {
           className="flex items-center"
         >
           <Image
-            src="/Logo.png"
+            // 🐛 FIX: Ensure the path matches the file name in the public directory
+            src="/logo.png" // Changed from '/Logo.png' to '/logo.png' 
             alt="Logo"
             width={70}
             height={70}
