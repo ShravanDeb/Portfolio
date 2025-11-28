@@ -12,10 +12,11 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center justify-center py-20"
+      className="flex flex-col items-center justify-center "
     >
       {/* === Start of Added Header Content === */}
       <div className="w-full h-auto flex flex-col items-center justify-center">
+        
         <motion.div
           variants={slideInFromTop}
           className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]]"
@@ -28,8 +29,8 @@ export const Projects = () => {
       </div>
       {/* === End of Added Header Content === */}
 
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10 md:py-20">
-        My Projects
+      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10 md:py-5">
+        Projects
       </h1>
       
       <div className="h-full w-full flex flex-col items-center justify-center gap-10 px-10">

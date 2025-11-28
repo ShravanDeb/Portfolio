@@ -249,12 +249,21 @@ export const CERTIFICATES = [
     dateOfIssue: "Nov 2025", 
 },
   {
-    title: "The Complete 2024 Web Development Bootcamp",
-    issuer: "Udemy (Dr. Angela Yu)",
+    title: "Member of International Association of Engineers (IAENG)",
+    issuer: "International Association of Engineers (IAENG)",
     // Updated to use the 'images' array (even if it only contains one image)
-    images: ["/certificates/web-dev-bootcamp.png"], 
-    verificationLink: "https://www.udemy.com/certificate/...",
-    dateOfIssue: "Jan 2024", 
+    images: ["/Certification/IAENG_membership_542471-1.png"], 
+    verificationLink: "https://drive.google.com/file/d/1WLSCkjX1U-HplFY1RbNRiVQ8_DsWMwCX/view?usp=sharing",
+    dateOfIssue: "Nov 2025", 
+  },
+
+  {
+    title: "Academy Accreditation - AI Agent Fundamentals",
+    issuer: "Databricks Academy",
+    // Updated to use the 'images' array (even if it only contains one image)
+    images: ["/Certification/1763102205567.jpg"], 
+    verificationLink: "https://credentials.databricks.com/d23a112b-d74f-42a9-81ea-b94202eb16b8",
+    dateOfIssue: "Nov 2025", 
   },
   // Note: Add more certificates here as needed.
 ] as const;

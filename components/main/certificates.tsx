@@ -26,7 +26,7 @@ export const Certificates = () => {
       </div>
       {/* === End of Added Header Content === */}
 
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10 md:py-20">
+      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-5 md:py-5">
         Certifications and  Licenses
       </h1>
       
